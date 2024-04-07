@@ -17,27 +17,9 @@ const contactsSlice = createSlice({
   name: 'contacts',
   initialState: initialContactsState,
   reducers: {
-    // addContact: {
-    //   reducer(state, action) {
-    //     state.contactsList.push(action.payload);
-    //   },
-    //   prepare({ id, name, number }) {
-    //     return {
-    //       payload: {
-    //         id,
-    //         name,
-    //         number,
-    //       },
-    //     };
-    //   },
-    // },
     searchContact(state, action) {
       state.filter = action.payload;
     },
-    // deleteContact(state, action) {
-    //   const index = state.contacts.findIndex(e => e.id === action.payload);
-    //   state.contacts.splice(index, 1);
-    // },
   },
   extraReducers: builder => {
     builder

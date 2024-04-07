@@ -1,6 +1,6 @@
 import { ContactForm } from '../contact-form/ContactForm';
 import { ContactList } from '../contact-list/ContactList';
-import { getContacts, getIsLoading, getError } from '../../redux/selectors';
+import { getIsLoading, getError } from '../../redux/selectors';
 import { Filter } from '../filter/Filter';
 import css from './App.module.css';
 import { useEffect } from 'react';
@@ -9,7 +9,6 @@ import { fetchContacts } from '../../redux/operations';
 
 const App = () => {
   const dispatch = useDispatch();
-  // const contacts = useSelector(getContacts);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
   useEffect(() => {

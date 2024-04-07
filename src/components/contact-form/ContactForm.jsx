@@ -1,7 +1,5 @@
 import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-// import { nanoid } from '@reduxjs/toolkit';
-// import { addContact } from '../../redux/contactsSlice';
 import { getContacts } from '../../redux/selectors';
 import { postContact } from '../../redux/operations';
 
@@ -12,7 +10,6 @@ const ContactForm = () => {
     e.preventDefault();
     const contactToAdd = {
       name: e.currentTarget.elements[0].value,
-      // id: nanoid(),
       phone: e.currentTarget.elements[1].value,
     };
 
@@ -26,7 +23,6 @@ const ContactForm = () => {
       alert(contactToAdd.name + 'is already in contacts');
       return;
     }
-    // dispatch(addContact(contactToAdd));
     dispatch(postContact(contactToAdd));
 
     e.currentTarget.reset();

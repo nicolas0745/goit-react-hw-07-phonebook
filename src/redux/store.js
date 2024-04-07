@@ -6,17 +6,3 @@ export const store = configureStore({
     contacts: contactsReducer,
   },
 });
-
-// let prevState = store.getState();
-
-// store.subscribe(() => {
-//   const currentState = store.getState();
-
-//   if (prevState.contacts !== currentState.contacts) {
-//     localStorage.setItem(
-//       'contacts',
-//       JSON.stringify(currentState.contacts.contactsList)
-//     );
-//   }
-//   prevState = currentState;
-// });
